@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif !important;
+    /* height: 100%; */
+}
+
+#cabecera {
+    height: 70px;
+    width: 100%;
+}
+
+.logoNav {
+    height: 70px;
+    width: 50%;
+    display: flex;
+}
+
+.logoNav h1 {
+    align-self: center;
+    padding: 2%;
+}
+
+.nav {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: flex-start;
+    /* justify-content: space-between; */
+    /* background-color: blanchedalmond; */
+    z-index: 1;
+    background-color: #282a35;
+
+}
+
+
+.nav h1 {
+    color: white;
+    align-self: center;
+    padding-left: 1%;
+}
+
+
+.nav ul {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.nav ul li {
+    display: inline;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;
+    color: rgb(139, 139, 139);
+}
+
+.nav li :hover {
+    color: white;
+}
+
+.seccion1 {
+    width: 100%;
+    height: 40%;
+    flex-direction: row;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    align-content: center;
+    justify-content: flex-end;
+}
+
+main {
+    width: 100%;
+    /* height: 100%;  */
+    background: #bdc3c7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#cards-inicio {
+    /*SE ASIGNA LA PROPIEDAD DE GRID PARA CUADRICULAR LA SECCIÓN*/
+    display: grid;
+    grid-template-columns: 60% 40%;
+    /*SE ASIGNAN DOS COLUMNAS DEL 60% Y 40%*/
+    grid-template-rows: 50%;
+    /*EL TAMAÑO DE LOS ROWS SERÁ DE 50%*/
+    width: 100%;
+    height: calc(100vh - 70px);
+    /*SE CALCULA EL TAMAÑO COMPLETO DE LA SECCIÓN 100vvh menos
+    96px (el tamaño del height de nuestro navbar)*/
+    position: relative;
+}
+
+.card1-inicio {
+    grid-row: 1/3;
+    /*EL TAMAÑO DEL PRIMER DIV IRÁ DESDE EL VALOR 1 DEL GRID HASTA EL 3
+    PARA VERLO GRAFICAMENTE HAY QUE INSPECCIONAR EL ELEMENTO EN CHROME PARA VER COMO SE COMPORTA
+    LA GRILLA*/
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    background-image: url('../images/tienda/card2-main.jpg');
+    
+    background-position: center;
+}
+
+.card1-inicio a {
+    width: 60%;
+    text-align: center;
+    position: absolute;
+    top: 95%;
+    cursor: pointer;
+    display: none;
+}
+
+.card2-inicio {
+    background-image: url('../images/tienda/card3-main.jpg');
+    /* background-position: center; */
+}
+
+.card2-inicio a {
+    width: 40%;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    display: none;
+}
+
+.card3-inicio {
+    background-image: url('../images/tienda/card4-main.jpg');
+    background-position: bottom;
+}
+
+.card3-inicio a {
+    width: 40%;
+    text-align: center;
+    position: absolute;
+    top: 95%;
+    display: none;
+}
+
+
+.card1-inicio:hover,
+.card2-inicio:hover,
+.card3-inicio:hover{
+    opacity: 0.5;   
+    transition: opacity 0.2s ease-in-out;   
+    background-size: 150%;
+    background-position: center;
+    cursor: pointer;
+    
+}
+
+.card1-inicio:hover a{
+    display: block;
+    top: 45%;
+    font-size: 50px;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    opacity: none;
+}
+.card2-inicio:hover a{
+    display: block;
+    top: 20%;
+    font-size: 50px;
+    color: white;
+    text-decoration: none;
+    backdrop-filter: none;
+    background-color: black;
+}
+.card3-inicio:hover a{
+    display: block;
+    top: 70%;
+    font-size: 50px;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    backdrop-filter: none;
+}
+
+.filtrar {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* width: 100%; */
+
+}
+
+#articulos {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* height: min-content; */
+
+
+}
+
+/* .filtrar > button {
+    width: 16%;
+    height: 50px;
+} */
+
+#articulos-filtrados {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8%;
+    grid-template-rows: repeat(4, min-content);
+}
+
+#articulos-filtrados>div {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.377);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#articulos-filtrados>div>img {
+    width: 100%;
+    height: 50%;
+}
+
+.elem10,
+.elem11,
+.elem12 {
+    margin-bottom: 20%;
+    /*NO MOVER!!*/
+}
+
+#articulos>div.filtrar>button {
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    height: 50px;
+    width: 12%;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+#articulos>div.filtrar>button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#articulos h1 {
+    color: white
+}
+
+#articulos>div.filtrar>select {
+    outline: none;
+    height: 30px;
+    background-color: white;
+    border: none;
+    border-bottom: 2px black solid;
+    align-self: center;
+    width: 12%;
+}
+
+#articulos-filtrados>div>button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+#articulos-filtrados>div>button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}

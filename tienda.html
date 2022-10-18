@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="./styles/tienda.css">
+    <script src="./js/main.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="cabecera">
+        <div class="nav">
+            <div class="logoNav"><img src="./images/logo.png" alt="LOGO" />
+                <h1>TECHNOLAND - TIENDA EN LINEA</h1>
+            </div>
+            <nav>
+                <br />
+                <ul>
+                    <li><a href="#inicio">INICIO</a></li>
+                    <li><a href="#sobreM">NUESTROS PRODUCTOS</a></li>
+                    <li><a href="#inge1">INICIAR SESIÓN</a></li>
+                    <li><a href="#contacto1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor"
+                                class="bi bi-cart2" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                            </svg>
+                        </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="cards-inicio">
+            <div class="card1-inicio">
+                <a href="">COMPUTADORAS</a>
+            </div>
+            <div class="card2-inicio">
+                <a href="">CELULARES</a>
+            </div>
+            <div class="card3-inicio">
+                <a href="">EQUIPO TECNICO</a>
+            </div>
+        </section>
+        <section id="articulos">
+            <h1>SELECCIONA ALGUNO DE NUESTROS ARTICULOS</h1>
+            <div class="filtrar">
+                <button value="compu" onclick="articulos()" id="computadoras-btn">COMPUTADORAS</button>
+                <button value="laptops" id="laptops-btn">LAPTOPS</button>
+                <button value="hardware" id="hardware-btn">HARDWARE</button>
+                <button value="celulares" id="celulares-btn">CELULARES</button>
+                <button value="redes" id="redes-btn">REDES</button>
+                <select name="" id="">
+                    <option value="" selected>SELECCIONA MÁS ARTICULOS</option>
+                    <option value="">DISCOS DUROS</option>
+                    <option value="">CABLES DE RED</option>
+                    <option value="">PROCESADORES</option>
+                    <option value="">MEMORIAS DDR</option>
+                    <option value="">MONITORES</option>
+                </select>
+            </div>
+            <section id="articulos-filtrados">
+                <div class="elem1">
+                    <img src="./images/tienda/computadoras/compu1.jpg" alt="">
+                    <h2>Laptop Huawei MateBook B3-410</h2>
+                    <h3>$12,999.00</h3>
+                    <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
+                        de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+                <div class="elem2">
+                    <img src="./images/tienda/computadoras/compu2.jpg" alt="">
+                    <h2>Laptop Huawei MateBook B3-410</h2>
+                    <h3>$12,999.00</h3>
+                    <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
+                        de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+                <div class="elem3">
+                    <img src="./images/tienda/computadoras/compu3.jpg" alt="">
+                    <h2>Laptop Huawei MateBook B3-410</h2>
+                    <h3>$12,999.00</h3>
+                    <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
+                        de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+                <div class="elem4">
+                    <img src="./images/tienda/computadoras/compu4.jpg" alt="">
+                    <h2>Laptop Huawei MateBook B3-410</h2>
+                    <h3>$12,999.00</h3>
+                    <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
+                        de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+                <div class="elem5">
+                    <img src="./images/tienda/computadoras/compu4.jpg" alt="">
+                    <h2>Laptop Huawei MateBook B3-410</h2>
+                    <h3>$12,999.00</h3>
+                    <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
+                        de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+                <div class="elem6">
+                    <img src="./images/tienda/computadoras/compu4.jpg" alt="">
+                    <h2>Laptop Huawei MateBook B3-410</h2>
+                    <h3>$12,999.00</h3>
+                    <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
+                        de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+                <div class="elem7">
+                    <img src="./images/tienda/computadoras/compu4.jpg" alt="">
+                    <h2>Laptop Huawei MateBook B3-410</h2>
+                    <h3>$12,999.00</h3>
+                    <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
+                        de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+                <div class="elem8">
+                    <img src="./images/tienda/computadoras/compu4.jpg" alt="">
+                    <h2>Laptop Huawei MateBook B3-410</h2>
+                    <h3>$12,999.00</h3>
+                    <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
+                        de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+                <div class="elem9">
+                    <img src="./images/tienda/computadoras/compu4.jpg" alt="">
+                    <h2>Laptop Huawei MateBook B3-410</h2>
+                    <h3>$12,999.00</h3>
+                    <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
+                        de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+                <div class="elem10">
+                    <img src="./images/tienda/computadoras/compu4.jpg" alt="">
+                    <h2>Laptop Huawei MateBook B3-410</h2>
+                    <h3>$12,999.00</h3>
+                    <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
+                        de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+                <div class="elem11">
+                    <img src="./images/tienda/computadoras/compu4.jpg" alt="">
+                    <h2>Laptop Huawei MateBook B3-410</h2>
+                    <h3>$12,999.00</h3>
+                    <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
+                        de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+                <div class="elem12">
+                    <img src="./images/tienda/computadoras/compu4.jpg" alt="">
+                    <h2>Laptop Huawei MateBook B3-410</h2>
+                    <h3>$12,999.00</h3>
+                    <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
+                        de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+            </section>
+    </main>
+    <footer>
+        <h1>HOLA MUNDO!</h1>
+    </footer>
+    <script src="./node_modules/animejs/lib/anime.min.js"></script>
+</body>
+
+</html>
