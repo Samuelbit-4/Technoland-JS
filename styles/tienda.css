@@ -116,8 +116,12 @@ main {
     flex-direction: column;
     order: 2;
     background-image: url('../images/tienda/card2-main.jpg');
-    
+    background-size: 100% 100%;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
     background-position: center;
+    cursor: pointer;
 }
 
 .card1-inicio a {
@@ -131,6 +135,12 @@ main {
 
 .card2-inicio {
     background-image: url('../images/tienda/card3-main.jpg');
+    background-size: 100% 100%;
+    background-position: top;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    cursor: pointer;
     /* background-position: center; */
 }
 
@@ -144,7 +154,12 @@ main {
 
 .card3-inicio {
     background-image: url('../images/tienda/card4-main.jpg');
-    background-position: bottom;
+    background-size: 100% 100%;
+    background-position: center;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    cursor: pointer;
 }
 
 .card3-inicio a {
@@ -153,17 +168,18 @@ main {
     position: absolute;
     top: 95%;
     display: none;
+    
 }
 
 
 .card1-inicio:hover,
 .card2-inicio:hover,
 .card3-inicio:hover{
-    opacity: 0.5;   
-    transition: opacity 0.2s ease-in-out;   
-    background-size: 150%;
+    /* opacity: 0.5;  */
+    background-size: 150% 150%; 
+    /* transition: opacity 0.2s linear;       
     background-position: center;
-    cursor: pointer;
+    cursor: pointer; */
     
 }
 

@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
     <link rel="stylesheet" href="./styles/tienda.css">
-    <script src="./js/main.js"></script>
+    
+    <script src="./node_modules/animejs/lib/anime.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -20,9 +21,9 @@
             <nav>
                 <br />
                 <ul>
-                    <li><a href="#inicio">INICIO</a></li>
-                    <li><a href="#sobreM">NUESTROS PRODUCTOS</a></li>
-                    <li><a href="#inge1">INICIAR SESIÓN</a></li>
+                    <li><a href="#cards-inicio">INICIO</a></li>
+                    <li><a href="#articulos">NUESTROS PRODUCTOS</a></li>
+                    <li><a href="./login.html">INICIAR SESIÓN</a></li>
                     <li><a href="#contacto1">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor"
                                 class="bi bi-cart2" viewBox="0 0 16 16">
@@ -66,11 +67,11 @@
             <section id="articulos-filtrados">
                 <div class="elem1">
                     <img src="./images/tienda/computadoras/compu1.jpg" alt="">
-                    <h2>Laptop Huawei MateBook B3-410</h2>
+                    <h2 class="item-title">Laptop Huawei MateBook B3-410</h2>
                     <h3>$12,999.00</h3>
                     <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
                         de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
-                    <button>AGREGAR AL CARRITO</button>
+                    <button class="btnAgregar">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="elem2">
                     <img src="./images/tienda/computadoras/compu2.jpg" alt="">
@@ -78,7 +79,7 @@
                     <h3>$12,999.00</h3>
                     <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
                         de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
-                    <button>AGREGAR AL CARRITO</button>
+                    <button class="btnAgregar">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="elem3">
                     <img src="./images/tienda/computadoras/compu3.jpg" alt="">
@@ -86,7 +87,7 @@
                     <h3>$12,999.00</h3>
                     <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
                         de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
-                    <button>AGREGAR AL CARRITO</button>
+                    <button class="btnAgregar">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="elem4">
                     <img src="./images/tienda/computadoras/compu4.jpg" alt="">
@@ -94,7 +95,7 @@
                     <h3>$12,999.00</h3>
                     <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
                         de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
-                    <button>AGREGAR AL CARRITO</button>
+                    <button class="btnAgregar">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="elem5">
                     <img src="./images/tienda/computadoras/compu4.jpg" alt="">
@@ -102,7 +103,7 @@
                     <h3>$12,999.00</h3>
                     <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
                         de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
-                    <button>AGREGAR AL CARRITO</button>
+                    <button class="btnAgregar">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="elem6">
                     <img src="./images/tienda/computadoras/compu4.jpg" alt="">
@@ -110,7 +111,7 @@
                     <h3>$12,999.00</h3>
                     <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
                         de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
-                    <button>AGREGAR AL CARRITO</button>
+                    <button class="btnAgregar">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="elem7">
                     <img src="./images/tienda/computadoras/compu4.jpg" alt="">
@@ -126,7 +127,7 @@
                     <h3>$12,999.00</h3>
                     <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
                         de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
-                    <button>AGREGAR AL CARRITO</button>
+                    <button class="btnAgregar">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="elem9">
                     <img src="./images/tienda/computadoras/compu4.jpg" alt="">
@@ -134,7 +135,7 @@
                     <h3>$12,999.00</h3>
                     <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
                         de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
-                    <button>AGREGAR AL CARRITO</button>
+                    <button class="btnAgregar">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="elem10">
                     <img src="./images/tienda/computadoras/compu4.jpg" alt="">
@@ -142,7 +143,7 @@
                     <h3>$12,999.00</h3>
                     <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
                         de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
-                    <button>AGREGAR AL CARRITO</button>
+                    <button class="btnAgregar">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="elem11">
                     <img src="./images/tienda/computadoras/compu4.jpg" alt="">
@@ -150,7 +151,7 @@
                     <h3>$12,999.00</h3>
                     <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
                         de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
-                    <button>AGREGAR AL CARRITO</button>
+                    <button class="btnAgregar">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="elem12">
                     <img src="./images/tienda/computadoras/compu4.jpg" alt="">
@@ -158,14 +159,14 @@
                     <h3>$12,999.00</h3>
                     <p>Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla
                         de 14" LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)</p>
-                    <button>AGREGAR AL CARRITO</button>
+                    <button class="btnAgregar">AGREGAR AL CARRITO</button>
                 </div>
             </section>
     </main>
     <footer>
         <h1>HOLA MUNDO!</h1>
     </footer>
-    <script src="./node_modules/animejs/lib/anime.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
