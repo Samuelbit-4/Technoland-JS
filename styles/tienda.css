@@ -331,3 +331,18 @@ main {
     width: 50%;
     align-items: center;
 }
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282a35;
+    color: white;
+}
+footer .redes{
+    width: 50vw;
+    text-align: center;
+    
+}
+footer .redes #icon{
+    filter: invert();
+}
