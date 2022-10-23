@@ -68,6 +68,29 @@ html {
     color: white;
 }
 
+#carrito {
+    position: relative;
+    width: 70px;
+
+
+}
+
+#carrito:hover {
+    color: white
+}
+
+#carrito span {
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50%;
+    margin-left: 5%;
+    padding: 10%;
+    font-size: 1em;
+    color: rgb(139, 139, 139);
+
+}
+
 .seccion1 {
     width: 100%;
     height: 40%;
@@ -168,22 +191,22 @@ main {
     position: absolute;
     top: 95%;
     display: none;
-    
+
 }
 
 
 .card1-inicio:hover,
 .card2-inicio:hover,
-.card3-inicio:hover{
+.card3-inicio:hover {
     /* opacity: 0.5;  */
-    background-size: 150% 150%; 
+    background-size: 150% 150%;
     /* transition: opacity 0.2s linear;       
     background-position: center;
     cursor: pointer; */
-    
+
 }
 
-.card1-inicio:hover a{
+.card1-inicio:hover a {
     display: block;
     top: 45%;
     font-size: 50px;
@@ -192,7 +215,8 @@ main {
     text-decoration: none;
     opacity: none;
 }
-.card2-inicio:hover a{
+
+.card2-inicio:hover a {
     display: block;
     top: 20%;
     font-size: 50px;
@@ -201,7 +225,8 @@ main {
     backdrop-filter: none;
     background-color: black;
 }
-.card3-inicio:hover a{
+
+.card3-inicio:hover a {
     display: block;
     top: 70%;
     font-size: 50px;
@@ -262,12 +287,10 @@ main {
     height: 50%;
 }
 
-.elem10,
-.elem11,
-.elem12 {
+/* .elem {
     margin-bottom: 20%;
-    /*NO MOVER!!*/
-}
+
+} */
 
 #articulos>div.filtrar>button {
     background-color: black;
@@ -285,6 +308,12 @@ main {
 #articulos>div.filtrar>button:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
+
+#articulos>div.filtrar>button:active {
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    transform: translateY(10px);
+}
+
 
 #articulos h1 {
     color: white
@@ -315,34 +344,140 @@ main {
     -webkit-transition-duration: 0.4s;
     /* Safari */
     transition-duration: 0.4s;
+
 }
+
 
 #articulos-filtrados>div>button:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-#main-carrito{
+
+#articulos-filtrados>div>button:active {
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    transform: translateY(7px);
+}
+
+#main-carrito {
     color: white;
-    display: flex;    
+    display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
 }
-#main-carrito table{
+
+#main-carrito table {
     width: 50%;
     align-items: center;
 }
-footer{
+
+#carrito-frame {
+    display: none;
+    background-color: white;
+    position: absolute;
+    width: 70vw;
+    height: auto;
+    top: 15%;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 10%;
+    position: fixed;
+    color: black !important;
+    font-size: 1.8em;
+}
+
+#carrito-frame div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#carrito-frame div h1 {
+    color: black;
+    text-align: center;
+}
+
+#carrito-frame div button.cerrar {
+    position: absolute;
+    top: 2%;
+    left: 95%;
+    border-radius: 15px;
+    padding: 1%;
+    background-color: white;
+    font-weight: bolder;
+}
+
+#carrito-frame div button.cerrar:hover {
+    background-color: red;
+    color: white
+}
+
+#carrito-frame div table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1em;
+    font-family: sans-serif;
+    min-width: 450px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#carrito-frame table tr {
+    background-color: #980081;
+    color: #ffffff;
+    text-align: middle;
+    border-bottom: 1px solid #dddddd;
+}
+
+#carrito-frame table td {
+    padding: 12px 15px;
+}
+
+#carrito-frame table tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#carrito-frame table tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+#carrito-frame button.pagar {
+    display: flex;
+    outline: none;
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 1em;
+    width: 17%;
+    justify-content: space-around;
+    -webkit-transition: 0.5s linear;
+    transition: 0.5s linear;
+
+}
+
+#carrito-frame button.pagar:hover {
+    -webkit-box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+    box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+    -webkit-transition: 0.5s linear;
+    transition: 0.5s linear;
+    padding: 10px;
+}
+
+footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #282a35;
     color: white;
+    padding: 5%;
 }
-footer .redes{
+
+footer .redes {
     width: 50vw;
     text-align: center;
-    
+
 }
-footer .redes #icon{
+
+footer .redes #icon {
     filter: invert();
 }

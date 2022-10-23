@@ -1,15 +1,15 @@
 const computadoras = [
     {
       id: 1,
-      img: "/images/tienda/computadoras/compu-desk-1.jpg",
-      itemTitle: "Laptop Huawei MateBook B3-410",
-      price: "$12,999.00",
+      img: "https://images.pcel.com/1600/Computadoras-Desktops-Hewlett-Packard-476S9LTABM-396954-Ki5KZVn4iOiikBoH.jpg",
+      itemTitle: "PC de Escritorio HP ProDesk G6",
+      price: "$16,999",
       description:
-        "Procesador Intel Core i5 10210U (hasta 4.20 GHz), Memoria de 8GB LPDDR4, SSD de 512GB, Pantalla de 14' LED, Video UHD Graphics 620, S.O. Windows 10 Pro (64 Bits)",
+        "Procesador Intel Core i5 10500T (hasta 3.80 GHz), Memoria de 8GB DDR4, SSD de 256GB, Video UHD Graphics 630, S.O. Windows 10 Pro (64 Bits)",
     },
     {
       id: 2,
-      img: "/images/tienda/computadoras/compu-desk-2.jpg",
+      img: "https://images.pcel.com/1600/Computadoras-Desktops-Hewlett-Packard-464A8LTABM-388884-Cu8apK0HyCFeksf1.jpg",
       itemTitle: "Computadora All in One HP 200",
       price: "$7,399.00",
       description:
@@ -17,7 +17,7 @@ const computadoras = [
     },
     {
       id: 3,
-      img: "/images/tienda/computadoras/compu-desk-3.jpg",
+      img: "https://images.pcel.com/1600/Computadoras-Desktops-Hewlett-Packard-38S65LTABM-387858-2uLI8vxLvbLRQL0X.jpg",
       itemTitle: "PC All in One HP 200 G4",
       price: "$13,999.00",
       description:
@@ -25,7 +25,7 @@ const computadoras = [
     },
     {
       id: 4,
-      img: "/images/tienda/computadoras/compu-desk-4.jpg",
+      img: "https://images.pcel.com/1600/Computadoras-Desktops-Lenovo-10RX004ULM-402322-oeeHquqi4nrHsVfp.jpg",
       itemTitle: "PC All in One Lenovo V130-20IGM",
       price: "$6,499.00",
       description:
@@ -33,7 +33,7 @@ const computadoras = [
     },
     {
       id: 5,
-      img: "/images/tienda/computadoras/compu-desk-5.jpg",
+      img: "https://images.pcel.com/1600/Computadoras-Desktops-Huawei-53012CPK-401782-2uJNSMYjOuFw6oXp.jpg",
       itemTitle: "PC de Escritorio MateStation B515",
       price: "$11,999.00",
       description:
@@ -41,7 +41,7 @@ const computadoras = [
     },
     {
       id: 6,
-      img: "/images/tienda/computadoras/compu-desk-6.jpg",
+      img: "https://images.pcel.com/1600/Computadoras-Desktops-DELL-HKFK0-432466-J39QvIR16yyiDtCr.jpg",
       itemTitle: "PC All in One DELL Inspiron 5410",
       price: "$28,999.00",
       description:
@@ -49,7 +49,7 @@ const computadoras = [
     },
     {
       id: 7,
-      img: "/images/tienda/computadoras/compu-desk-7.jpg",
+      img: "https://images.pcel.com/1600/Computadoras-Desktops-Hewlett-Packard-434F4LAABM-434326-40j9gPcEmQp73AF8.jpg",
       itemTitle: "PC All in One HP 24-df1505la",
       price: "$13,999.00",
       description:
@@ -57,7 +57,7 @@ const computadoras = [
     },
     {
       id: 8,
-      img: "/images/tienda/computadoras/compu-desk-8.jpg",
+      img: "https://images.pcel.com/1600/Computadoras-Desktops-Hewlett-Packard-61U00LS-432218-Sh6YuMZn6dNGGUsc.jpg",
       itemTitle: "PC de Escritorio HP ProDesk 400 G7 SFF",
       price: "$15,499.00",
       description:
@@ -65,7 +65,7 @@ const computadoras = [
     },
     {
       id: 9,
-      img: "/images/tienda/computadoras/compu-desk-9.jpg",
+      img: "https://images.pcel.com/1600/Computadoras-Desktops-Huawei-53012CPK-401782-NHvlfKoa2A3t0aA7.jpg",
       itemTitle: "PC de Escritorio MateStation S B515",
       price: "$15,499.00",
       description:
@@ -73,7 +73,7 @@ const computadoras = [
     },
     {
       id: 10,
-      img: "/images/tienda/computadoras/compu-desk-10.jpg",
+      img: "https://images.pcel.com/1600/Computadoras-Desktops-Lenovo-MX1XLD06MX-1-434518-ebCm7YmTAWRFm3mB.jpg",
       itemTitle: "All in One Lenovo IdeaCentre 3",
       price: "$13,999.00",
       description:
@@ -81,7 +81,7 @@ const computadoras = [
     },
     {
       id: 11,
-      img: "/images/tienda/computadoras/compu-desk-11.jpg",
+      img: "https://images.pcel.com/1600/Computadoras-Desktops-VORAGO-10400-NOS-5-417072-9TGQ1CnCDx1xl95n.jpg",
       itemTitle: "PC de Escritorio VORAGO GF CHOOSE",
       price: "$18,999.00",
       description:
@@ -89,7 +89,7 @@ const computadoras = [
     },
     {
       id: 12,
-      img: "/images/tienda/computadoras/compu-desk-12.jpg",
+      img: "https://images.pcel.com/1600/Computadoras-Desktops-Hewlett-Packard-200R9LTABM-377726-oypfoZdz0SURN293.jpg",
       itemTitle: "PC All in One HP 400 G6",
       price: "$22,399.00",
       description:

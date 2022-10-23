@@ -10,6 +10,5 @@ localStorage.setItem('usuario', JSON.stringify(person))
 const enviar = document.querySelector('#enviar-ls')
 enviar.addEventListener('click', ()=>{
     
-    let user = localStorage.getItem('usuario')
-    console.log(user)
+    
 })
