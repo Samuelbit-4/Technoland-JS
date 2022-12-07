@@ -1,4 +1,4 @@
-var cuerpo = document.querySelectorAll("body");
+var cuerpo = document.querySelector("body");
 console.log(cuerpo);
 //METODO PARA PRIORIZAR LA CARGA DE LOS ELEMENTOS
 document.addEventListener("DOMContentLoaded", () => {
@@ -161,6 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // carritoFrame.classList.add("hola");
     //CAMBIAMOS SU DISPLAY A BLOCK PARA MOSTRARLO
     carritoFrame.setAttribute("style", "display: block;");
+    // cuerpo.classList = "deshabilitar"
   });
   //SELECCIONAMOS EL BOTON DE CERRAR
   const cerrarCarrito = document.querySelector("#carrito-frame button.cerrar");
@@ -189,62 +190,73 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
-//SELECCIONAMOS TODOS LOS BOTONES DE LOS DIVS EN LOS ARTICULOS FILTRADOS
+  //SELECCIONAMOS TODOS LOS BOTONES DE LOS DIVS EN LOS ARTICULOS FILTRADOS
   const contadorArticulos = document.querySelectorAll(
     "#articulos-filtrados div button"
   );
 
   //BUG: CUENTA DE MÁS LOS ARTICULOS Y LOS REPITE
-  //AUN EN ELABORACIO!!!!
+  //AUN EN ELABORACION!!!!
   let contadorCarrito = 1;
+  let contadorArticulosArray = 0;
   contadorArticulos.forEach((itms) => {
-    itms.addEventListener("click", (e) => {
-      itms.classList.add("seleccionado");
-      const articuloSeleccionado = itms.parentNode;
-
-      const nombreArticulo = articuloSeleccionado.childNodes[1].textContent;
-      const precioArticulo = articuloSeleccionado.childNodes[2].textContent;
-      const descripcionArticulo =
-        articuloSeleccionado.childNodes[3].textContent;
-      const articulosCarrito = [
-        {
-          nombre: nombreArticulo,
-        },
-        {
-          precios: precioArticulo,
-        },
-        {
-          descripcion: descripcionArticulo,
-        },
-      ];
-      articulosCarrito.forEach((items) => {
-        console.log(items);
-      });
-      localStorage.setItem("articulo", JSON.stringify(articulosCarrito));
-      const filasCarrito = document.querySelector("#carrito-frame div table");
-      const tr = document.createElement("tr");
-      filasCarrito.appendChild(tr);
-      const tdArticulo = document.createElement("td");
-      const txtArticulo = JSON.parse(localStorage.getItem("articulo"));
-      tdArticulo.textContent = txtArticulo[0].nombre;
-      tr.appendChild(tdArticulo);
-      const tdDescripcion = document.createElement("td");
-      tdDescripcion.style.fontSize = "0.5em";
-      tdDescripcion.textContent = txtArticulo[2].descripcion;
-      tr.appendChild(tdDescripcion);
-      const btnAgregar = document.createElement("button");
-      const btnRestar = document.createElement("button");
-      btnAgregar.textContent = "+";
-      btnRestar.textContent = "-";
-      tr.appendChild(btnAgregar);
-      tr.appendChild(btnRestar);
-      const tdPrecio = document.createElement("td");
-      tdPrecio.textContent = txtArticulo[1].precios;
-      tr.appendChild(tdPrecio);
-
-      const contadorArti = document.querySelector("#contador-carrito");
-      contadorArti.textContent = contadorCarrito++;
-      console.log("agregado");
-    });
+    itms.addEventListener("click", (e) => agregarCarrito(itms));
   });
+
+  function agregarCarrito(itms) {
+    //ARTICULO SELECCIONADO
+    itms.classList.add("seleccionado");
+
+    //GUARDANDO LOS ARTICULOS EN UN ARREGLO
+    const articuloSeleccionado = itms.parentNode;
+    const imagenArticulo = articuloSeleccionado.childNodes[0].src;
+    const nombreArticulo = articuloSeleccionado.childNodes[1].textContent;
+    const precioArticulo = articuloSeleccionado.childNodes[2].textContent;
+    const descripcionArticulo = articuloSeleccionado.childNodes[3].textContent;
+
+    const datos = {
+      imagen: imagenArticulo,
+      nombre: nombreArticulo,
+      precio: precioArticulo,
+      description: descripcionArticulo,
+    };
+    let arrays = [];
+    arrays.push(datos);
+
+    //FILTRANDO LOS ARTICULOS QUE SE REPITEN Y DEJARLOS EN UN NUEVO ARRAY
+    let result = arrays.filter((item, index) => {
+      return arrays.indexOf(item) === index;
+    });
+    console.log(result.length);
+    const tablaArticulos = document.querySelector("#tabla-articulos");
+
+    //MOSTRANDO LOS ARTICULOS GUARDADOS EN EL LOCALSTORAGE
+    //BUG: MUESTRA DOS VECES EL MISMO PRODUCTO
+    for (let index = 0; index < result.length; index++) {
+      const tr = document.createElement("tr");
+      const tdimg = document.createElement("td");
+      tdimg.innerHTML = `<img src="${result[index].imagen}" style="width: 60%">`;
+      const td1 = document.createElement("td");
+      td1.textContent = result[index].nombre;
+      const td2 = document.createElement("td");
+      td2.textContent = result[index].description;
+
+      const td3 = document.createElement("td");
+      td3.innerHTML = `<span id="contador">0</span><br>
+                          <button>
+                              <span class="material-symbols-outlined">add</span>
+                          </button>
+                          <button>
+                              <span class="material-symbols-outlined">remove</span>
+                          </button>`;
+      const td4 = document.createElement("td");
+      td4.textContent = result[index].precio;
+      tablaArticulos.appendChild(tr);
+      tr.appendChild(tdimg);
+      tr.appendChild(td1);
+      tr.appendChild(td2);
+      tr.appendChild(td3);
+      tr.appendChild(td4);
+    }
+  }
 });

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
     <link rel="stylesheet" href="./styles/tienda.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="./node_modules/animejs/lib/anime.min.js"></script>
     <title>Document</title>
 </head>
@@ -68,29 +68,32 @@
             <section id="articulos-filtrados">
                 <!-- INSERCIÓN DESDE JAVASCRIPT -->
             </section>
-            <section id="carrito-frame">
-                <div>
-                    <h1>CARRITO DE COMPRAS</h1>
-                    <button class="cerrar">X</button>
-                    <table>
-                        <tr>
-                            <td>Articulo</td>
-                            <td>Descripción</td>
-                            <td>Unidades</td>
-                            <td>PRECIO</td>
-                        </tr>
-                        <!-- INSERCIÓN DESDE JAVASCRIPT -->
-
-                    </table>
-                    <button class="pagar"><svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
-                            fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
-                            <path
-                                d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
-                        </svg>PAGAR</button>
-                </div>
-
-            </section>
+            
     </main>
+    <section id="carrito-frame">
+        <div>
+            <h1>CARRITO DE COMPRAS</h1>
+            <button class="cerrar">X</button>
+            <table id="tabla-articulos">
+                <tr>
+                    <td>Articulo</td>
+                    <td>Nombre</td>
+                    <td>Descripción</td>
+                    <td>Unidades</td>
+                    <td>Precio Total</td>
+                </tr>
+                <!-- INSERCIÓN DESDE JAVASCRIPT -->
+            </table>
+            <div>
+                <h3>PRECIO TOTAL: <span>0</span></h3>
+            </div>
+            <button class="pagar"><svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
+                    fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+                    <path
+                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                </svg>PAGAR</button>
+        </div>
+    </section>
     <footer>
         <div class="redes">
             <h1>REDES SOCIALES</h1>
