@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
       //CREACION DE LOS BOTONES
       const button = document.createElement("button");
       button.textContent = "AGREGAR AL CARRITO";
+      button.id = "btnAgregar"
       articulo.appendChild(button);
 
       //AGREGAMOS UNO A LOS CONTADORES
@@ -99,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
       //CREAMOS LOS BOTONES
       const button = document.createElement("button");
       button.textContent = "AGREGAR AL CARRITO";
+      button.id = "btnAgregar"
       articulo.appendChild(button);
       elemCard++;
       conta++;
@@ -143,6 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const button = document.createElement("button");
       button.textContent = "AGREGAR AL CARRITO";
+      button.id = "btnAgregar"
       articulo.appendChild(button);
       elemCard++;
       conta++;
@@ -192,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   //SELECCIONAMOS TODOS LOS BOTONES DE LOS DIVS EN LOS ARTICULOS FILTRADOS
   const contadorArticulos = document.querySelectorAll(
-    "#articulos-filtrados div button"
+    "#btnAgregar"
   );
 
   //BUG: CUENTA DE MÁS LOS ARTICULOS Y LOS REPITE
@@ -200,63 +203,45 @@ document.addEventListener("DOMContentLoaded", () => {
   let contadorCarrito = 1;
   let contadorArticulosArray = 0;
   contadorArticulos.forEach((itms) => {
-    itms.addEventListener("click", (e) => agregarCarrito(itms));
+    itms.addEventListener("click", (e) => {
+      agregarCarrito(itms)
+      contadorArticulosArray++;
+    });
   });
-
+  const arrays = [];
   function agregarCarrito(itms) {
     //ARTICULO SELECCIONADO
     itms.classList.add("seleccionado");
 
     //GUARDANDO LOS ARTICULOS EN UN ARREGLO
     const articuloSeleccionado = itms.parentNode;
+    articuloSeleccionado.classList.add("seleccionado")
     const imagenArticulo = articuloSeleccionado.childNodes[0].src;
     const nombreArticulo = articuloSeleccionado.childNodes[1].textContent;
     const precioArticulo = articuloSeleccionado.childNodes[2].textContent;
     const descripcionArticulo = articuloSeleccionado.childNodes[3].textContent;
 
-    const datos = {
+    let datos = {
       imagen: imagenArticulo,
       nombre: nombreArticulo,
       precio: precioArticulo,
       description: descripcionArticulo,
     };
-    let arrays = [];
-    arrays.push(datos);
+    arrays.push(JSON.stringify(datos));
+    console.log(arrays);
+    
+    const unicos = [... new Set(arrays)]
+    console.log(unicos)
+    let contadorr = 0;
+    const tablaArticulos = document.querySelector("#tabla-articulos")
+    unicos.forEach(e =>{
+      const tr = document.createElement("tr")
+      const td1 = document.createElement("td")
+      td1.textContent = e
+      tablaArticulos.appendChild(tr)
+      tr.appendChild(td1)
+    })
 
-    //FILTRANDO LOS ARTICULOS QUE SE REPITEN Y DEJARLOS EN UN NUEVO ARRAY
-    let result = arrays.filter((item, index) => {
-      return arrays.indexOf(item) === index;
-    });
-    console.log(result.length);
-    const tablaArticulos = document.querySelector("#tabla-articulos");
-
-    //MOSTRANDO LOS ARTICULOS GUARDADOS EN EL LOCALSTORAGE
-    //BUG: MUESTRA DOS VECES EL MISMO PRODUCTO
-    for (let index = 0; index < result.length; index++) {
-      const tr = document.createElement("tr");
-      const tdimg = document.createElement("td");
-      tdimg.innerHTML = `<img src="${result[index].imagen}" style="width: 60%">`;
-      const td1 = document.createElement("td");
-      td1.textContent = result[index].nombre;
-      const td2 = document.createElement("td");
-      td2.textContent = result[index].description;
-
-      const td3 = document.createElement("td");
-      td3.innerHTML = `<span id="contador">0</span><br>
-                          <button>
-                              <span class="material-symbols-outlined">add</span>
-                          </button>
-                          <button>
-                              <span class="material-symbols-outlined">remove</span>
-                          </button>`;
-      const td4 = document.createElement("td");
-      td4.textContent = result[index].precio;
-      tablaArticulos.appendChild(tr);
-      tr.appendChild(tdimg);
-      tr.appendChild(td1);
-      tr.appendChild(td2);
-      tr.appendChild(td3);
-      tr.appendChild(td4);
-    }
   }
 });
+ 
