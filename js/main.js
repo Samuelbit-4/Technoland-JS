@@ -212,7 +212,17 @@ document.addEventListener("DOMContentLoaded", () => {
   function agregarCarrito(itms) {
     //ARTICULO SELECCIONADO
     itms.classList.add("seleccionado");
-
+    const tablaArticulos = document.querySelector("#tabla-articulos")
+    tablaArticulos.innerHTML = `
+    <tr>
+      <td>Articulo</td>
+      <td>Nombre</td>
+      <td>Descripción</td>
+      <td>Unidades</td>
+      <td>Precio Total</td>
+    </tr>
+    `;
+    const precioAcumulado = document.querySelector("#pTotal")
     //GUARDANDO LOS ARTICULOS EN UN ARREGLO
     const articuloSeleccionado = itms.parentNode;
     articuloSeleccionado.classList.add("seleccionado")
@@ -233,15 +243,50 @@ document.addEventListener("DOMContentLoaded", () => {
     const unicos = [... new Set(arrays)]
     console.log(unicos)
     let contadorr = 0;
-    const tablaArticulos = document.querySelector("#tabla-articulos")
-    unicos.forEach(e =>{
+
+    unicos.forEach(e =>{  
+      const data = JSON.parse(e)   
       const tr = document.createElement("tr")
-      const td1 = document.createElement("td")
-      td1.textContent = e
+      //
+      const td1 = document.createElement("td")     
+      const img = document.createElement("img")
+      img.src = data.imagen
+      img.style.width = "100px"
+      td1.appendChild(img)
+      //
+      const td2 = document.createElement("td")
+      td2.textContent = data.nombre
+      //
+      const td3 = document.createElement("td")
+      td3.textContent = data.description
+      //
+      const td4 = document.createElement("td")
+      td4.innerHTML = `<button class="agregar"><span class="material-symbols-outlined">
+      add
+      </span></button>
+      <button class="restar"><span class="material-symbols-outlined">
+      remove
+      </span></button>`
+      //
+      const td5 = document.createElement("td")
+      td5.textContent = `$${new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(data.precio)}`
+      //
       tablaArticulos.appendChild(tr)
       tr.appendChild(td1)
+      tr.appendChild(td2)
+      tr.appendChild(td3)
+      tr.appendChild(td4)
+      tr.appendChild(td5)
+      
+      contadorr += parseInt(data.precio);
+      let moneda = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(contadorr);
+      precioAcumulado.textContent = `$${moneda}`
     })
 
+  }
+
+  function agregarItem(){
+    
   }
 });
  
